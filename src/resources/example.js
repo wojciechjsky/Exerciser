@@ -1,0 +1,1 @@
+export const multiplyBy2 = (a) => a*2;
