@@ -1,0 +1,30 @@
+{
+  "name": "Exerciser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/resources/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "start": "webpack serve --open 'Firefox'",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojciechjsky/Exerciser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wojciechjsky/Exerciser/issues"
+  },
+  "homepage": "https://github.com/wojciechjsky/Exerciser#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
