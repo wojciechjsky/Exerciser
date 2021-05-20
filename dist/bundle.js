@@ -1,1 +1,0 @@
-(()=>{"use strict";class t{static multiplyBy2=function(t){return 2*t};static divideBy2=t=>2*t;static squarePower=t=>t**2}t.multiplyBy2(2),t.divideBy2(4),t.squarePower(4)})();
