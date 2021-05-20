@@ -23,6 +23,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: "./src/views/index.html",
+            filename: "index.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/views/index1.html",
+            filename: "index1.html"
+        })
     ]
 };
