@@ -1,5 +1,8 @@
-export { multiplyBy2, divideBy2, squarePower }
+export class MathCustom {
+    static multiplyBy2 = function (a) {
+        return a * 2;
+    }
+    static divideBy2 = (a) => a * 2;
+    static squarePower = (a) => a ** 2;
 
-const multiplyBy2 = (a) => a*2;
-const divideBy2 = (a) => a*2;
-const squarePower = (a) => a**2;
+}
