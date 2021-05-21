@@ -21,24 +21,18 @@ module.exports = {
                 test: /\.html$/i,
                 use: ['html-loader'],
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ]
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', 'html']
     },
     output: {
-        filename: "[name].bundle.js",
+        filename: "[name].js",
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [new HtmlWebpackPlugin()]
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         template: "./src/views/index.html",
-    //         filename: "index.html"
-    //     }),
-    //     new HtmlWebpackPlugin({
-    //         template: "./src/views/index1.html",
-    //         filename: "index1.html"
-    //     })
-    // ]
 };

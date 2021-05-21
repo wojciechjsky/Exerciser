@@ -1,5 +1,6 @@
 import { MathCustom as MC } from "./resources/example";
 import * as DB from './resources/data.json';
+require('./index.html')
 
 
 const MathCustom = new MC();
