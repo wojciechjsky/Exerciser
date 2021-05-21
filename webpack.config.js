@@ -22,8 +22,26 @@ module.exports = {
                 use: ['html-loader'],
             },
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                // test: /\.css$/i,
+                // use: ["style-loader", "css-loader"],
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "assets/[name].[ext]",
+                        },
+                    },
+                    {
+                        loader: "extract-loader",
+                        options: {
+                            publicPath: "../",
+                        }
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                ],
             },
         ]
     },
