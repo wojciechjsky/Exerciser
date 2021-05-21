@@ -1,5 +1,6 @@
-import { MathCustom as MC } from "./resources/example"
-import * as DB from './resources/data.json'
+import { MathCustom as MC } from "./resources/example";
+import * as DB from './resources/data.json';
+
 
 const MathCustom = new MC();
 
@@ -11,4 +12,3 @@ const IDs = DB.data.map(e => e.Id)
 
 console.log(IDs);
 
-// const ids = data.forEach( e => e.name)

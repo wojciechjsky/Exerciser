@@ -1,9 +1,13 @@
 const path = require("path");
+require("html-loader");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/app.ts',
+    entry: {
+        bundle:'./src/app.ts',
+        // index:'./src/index.html',
+    },
     devtool: 'inline-source-map',
     mode: 'production',
     module: {
@@ -12,24 +16,29 @@ module.exports = {
                 test:/\.ts/,
                 use: ['ts-loader'],
                 exclude: /node_modules/
-            }
+            },
+            {
+                test: /\.html$/i,
+                use: ['html-loader'],
+            },
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js', '.json', 'html']
     },
     output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist')
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/views/index.html",
-            filename: "index.html"
-        }),
-        new HtmlWebpackPlugin({
-            template: "./src/views/index1.html",
-            filename: "index1.html"
-        })
-    ]
+    plugins: [new HtmlWebpackPlugin()]
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: "./src/views/index.html",
+    //         filename: "index.html"
+    //     }),
+    //     new HtmlWebpackPlugin({
+    //         template: "./src/views/index1.html",
+    //         filename: "index1.html"
+    //     })
+    // ]
 };
